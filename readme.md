@@ -58,9 +58,8 @@ React will work with any back-end language, but for project 3 and in our in-clas
 ---
 
 ### Exercise: IMDBExplorer (10 minutes / 5 minutes review)
-* With the other people at your table, look at the code on the [IMDBExplorer Github Repository](https://github.com/aspittel/IMDBExplorer). The app pulls movies that fit a search term and then the user can look at more detail or favorite the movies.
-* The app is hosted here: https://imdb-api-app.herokuapp.com/, unfortunately the API has been made private so it doesn't really work.
-* Check out the code in `views/index.html` and `public/imdb_api_app.js`. This branch was written using vanilla JavaScript and HTML. Also look at the code on the `react` branch by using the dropdown on the Github Repository.
+* With the other people at your table, look at the code on the RealWorld ToDo repository [here](https://github.com/gothinkster/realworld). This site shows the same to do list application written in a bunch of different front end frameworks.
+* For this exercise, look at the VanillaJS and React examples on their site.
 * With your neighbor, discuss what differences you see between the React code and the vanilla JavaScript code. Write down your findings on the table next to you.
 
 
