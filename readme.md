@@ -47,12 +47,12 @@ React was born out of Facebook's frustration with the traditional MVC model and 
 
 React can be thought of as the "Views" layer.
 
+React will work with any back-end language, but for project 3 and in our in-class examples we will be using Mongoose and Express for the models and controllers.
+
 <details>
   <summary><strong>What is the role of a "view" in a front-end Javascript application?</strong></summary>
   The visual template the user sees, often populated with data from our models.
 </details>
-
-React will work with any back-end language, but for project 3 and in our in-class examples we will be using Mongoose and Express for the models and controllers.
 ---
 
 ### Exercise: Thinkster RealWorld Applications (10 minutes / 5 minutes review)
