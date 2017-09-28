@@ -57,7 +57,7 @@ React can be thought of as the "Views" layer.
 React will work with any back-end language, but for project 3 and in our in-class examples we will be using Mongoose and Express for the models and controllers.
 ---
 
-### Exercise: IMDBExplorer (10 minutes / 5 minutes review)
+### Exercise: Thinkster RealWorld Applications (10 minutes / 5 minutes review)
 * With the other people at your table, look at the code on the RealWorld ToDo repository [here](https://github.com/gothinkster/realworld). This site shows the same to do list application written in a bunch of different front end frameworks.
 * For this exercise, look at the VanillaJS and React examples on their site.
 * With your neighbor, discuss what differences you see between the React code and the vanilla JavaScript code. Write down your findings on the table next to you.
