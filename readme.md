@@ -49,9 +49,7 @@ React can be thought of as the "Views" layer.
 
 <details>
   <summary><strong>What is the role of a "view" in a front-end Javascript application?</strong></summary>
-
-  > The visual template the user sees, often populated with data from our models.
-
+  The visual template the user sees, often populated with data from our models.
 </details>
 
 React will work with any back-end language, but for project 3 and in our in-class examples we will be using Mongoose and Express for the models and controllers.
