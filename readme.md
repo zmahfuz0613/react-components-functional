@@ -53,9 +53,12 @@ React will work with any back-end language, but for project 3 and in our in-clas
   <summary><strong>What is the role of a "view" in a front-end Javascript application?</strong></summary>
   The visual template the user sees, often populated with data from our models.
 </details>
+
 ---
 
+
 ### Exercise: Thinkster RealWorld Applications (10 minutes / 5 minutes review)
+
 * With the other people at your table, look at the code on the RealWorld ToDo repository [here](https://github.com/gothinkster/realworld). This site shows the same to do list application written in a bunch of different front end frameworks.
 * For this exercise, look at the VanillaJS and React examples on their site.
 * With your neighbor, discuss what differences you see between the React code and the vanilla JavaScript code. Write down your findings on the table next to you.
@@ -70,7 +73,7 @@ When taking a look at Facebook, you could think of each status post as a mini-co
 Imagine you worked at Facebook when they wanted to shift from using likes to reactions. Using traditional JavaScript, HTML, and CSS the shift would make you have to change your code in a bunch of places. Component based architecture allows us to maintain our code more easily.
 
 
-### You Do: Identifying Components (10 minutes)
+### Exercise: Identifying Components (10 minutes)
 
 > 5 minutes exercise. 5 minutes review.
 * Break into groups of three and take a look at Facebook. Identify the visual "components" the website is comprised of. We suggest using markers to draw these out on your table! So something like this...
@@ -126,7 +129,7 @@ In order to create a new project and to get our development environment setup, w
 
 It uses Webpack which is a build tool that enables many of the features listed above. It also includes Babel which transpiles our JavaScript from ES6 to be compatible with older browsers. It also includes Autoprefixer for the cross browser CSS compatibility, ESLint for linting, and Jest for testing.
 
-Later in this class we will be giving a class on how to set this up ourselves, but for now `create-react-app` allows us to worry more about our code than configuration!
+Later in this class we will be giving a workshop on how to set this up ourselves, but for now `create-react-app` allows us to worry more about our code than configuration!
 
 ```bash
 $ npm i -g create-react-app
@@ -230,10 +233,8 @@ The JSX creates a heading with 'Hello World!'.
 
 > React can be written without JSX. If you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/).  
 
-* React then uses these objects to build out a "Virtual DOM" -- more on that in just a bit.
 
-
-**Virtual DOM? How is that different from the usual DOM?** (10 minutes)
+## Virtual DOM (10 minutes)
 
 You may have noticed that our `src/index.js` code mentions ReactDOM. ReactDOM doesn't refer to the same DOM we know. Instead, it refers to a Virtual DOM. The Virtual DOM is a key piece of how React works.
 
