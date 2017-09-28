@@ -339,7 +339,7 @@ class Hello extends Component {
     return (
       <div>
         <h1>Hello {this.props.name}</h1>
-        <p>You are {this.props.age} years old</p>
+        <p>You are {this2.props.age} years old</p>
       </div>
     )
   }
