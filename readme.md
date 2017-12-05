@@ -15,7 +15,7 @@
 
 ## Framing
 
-### What is a Frontend Framework? (5 mins)
+### What is a Frontend Framework? (5 mins / 2:35)
 
 - A framework is software providing generic functionality and structure that serves as foundation to build and deploy applications.
 - The introduction of the [software framework](https://en.wikipedia.org/wiki/Software_framework) article on wikipedia does an excellent job on an exact definition.
@@ -23,7 +23,7 @@
 - There are [many](http://stateofjs.com/2016/frontend/) front end frameworks and each go about solving problems of how state is managed, updated, and represented by a view but there are many commonalities.
 - There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
-### What is ReactJS? (10 mins)
+### What is ReactJS? (10 mins / 2:45)
 
 React is a JavaScript library used to craft modern day UI and views for the front-end in web applications.
 
@@ -53,37 +53,26 @@ React will work with any back-end language, but for project 3 and in our in-clas
   The visual template the user sees, often populated with data from our models.
 </details>
 
----
 
+### Exercise: Thinkster RealWorld Applications (10 minutes / 2:55)
 
-### Exercise: Thinkster RealWorld Applications (10 minutes / 5 minutes review)
+> 5 minutes exercise. 5 minutes review.
 
 * With the other people at your table, look at the code on the RealWorld ToDo repository [here](https://github.com/gothinkster/realworld). This site shows the same to do list application written in a bunch of different front end frameworks.
 * For this exercise, look at the VanillaJS and React examples on their site.
 * With your neighbor, discuss what differences you see between the React code and the vanilla JavaScript code. Write down your findings on the table next to you.
 
+---
 
-## Components (5 mins)
+## Components (5 mins / 3:00)
 
-One of the snarky comments made about React when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In React, we want to move towards more of a **component-based** separation of concerns.
+One comment made about React when it was first open sourced was "Rethinking established best practices". In React, we want to move away from templates and more towards a **component-based** separation of concerns.  [Components vs Templates](https://wanderoak.co/fixed-templates-vs-components/)
 
 When taking a look at Facebook, you could think of each status post as a mini-component in React. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
 Imagine you worked at Facebook when they wanted to shift from using likes to reactions. Using traditional JavaScript, HTML, and CSS the shift would make you have to change your code in a bunch of places. Component based architecture allows us to maintain our code more easily.
 
-
-### Exercise: Identifying Components (10 minutes)
-
-> 5 minutes exercise. 5 minutes review.
-* Break into groups of three and take a look at Facebook. Identify the visual "components" the website is comprised of. We suggest using markers to draw these out on your table! So something like this...
-
 ![Component diagram](https://maketea.co.uk/images/2014-03-05-robust-web-apps-with-react-part-1/wireframe_deconstructed.png)
-
-As you're drawing this out, think about the following questions...
-* Where do you see "nested components"? Where do you not?
-* Are there any components that share the same structure?
-* Of these similar components, what is different about them?
-
 
 ### [F.I.R.S.T. Components](https://addyosmani.com/first/)
 
@@ -117,8 +106,20 @@ Because the same input will always produce the same output, components are easil
 
 > If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
 
+
+### Exercise: Identifying Components (10 minutes / 3:40)
+
+> 5 minutes exercise. 5 minutes review.
+* Break into groups of three and take a look at Facebook. Identify the visual "components" the website is comprised of. We suggest using markers to draw these out on your table! So something like this...
+
+As you're drawing this out, think about the following questions...
+* Where do you see "nested components"? Where do you not?
+* Are there any components that share the same structure?
+* Of these similar components, what is different about them?
+
+## Break: 10 minutes
+
 ---
-### Break: 10 minutes
 
 ## Initial Setup (20 minutes)
 
