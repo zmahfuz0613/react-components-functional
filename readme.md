@@ -17,10 +17,9 @@
 
 ### What is a Frontend Framework? (5 mins)
 
-- A framework is software providing generic functionality that serves as foundation to build and deploy applications.
-- A framework manages the overall application flow. Simply put, frameworks call the code you write while you call the code provided by a library.
-- While dense, the introduction of the [software framework](https://en.wikipedia.org/wiki/Software_framework) article on wikipedia does an excellent job on an exact definition.
-- The way that Sinatra and Rails are frameworks that run on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client, a front end framework runs in the client's browser (meaning in what language?), receives input from interactions with the page, performs some work that you have defined, and makes any updates necessary.
+- A framework is software providing generic functionality and structure that serves as foundation to build and deploy applications.
+- The introduction of the [software framework](https://en.wikipedia.org/wiki/Software_framework) article on wikipedia does an excellent job on an exact definition.
+- Sinatra and Rails are frameworks that run on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client.  Front-end frameworks run in the client's browser, receive input from interactions with the page, perform some work that you have defined, and make any updates necessary.
 - There are [many](http://stateofjs.com/2016/frontend/) front end frameworks and each go about solving problems of how state is managed, updated, and represented by a view but there are many commonalities.
 - There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
@@ -30,7 +29,7 @@ React is a JavaScript library used to craft modern day UI and views for the fron
 
 > **Selling Point:** By modeling small compatible components that focus on just rendering a view, we can move business logic out of the DOM, and therefore improve our app's performance, maintainability, modularity and readability.
 
-#### Some History 
+#### Some History
 
 The first thing most people hear about React is "Facebook uses it."
 * First used by Facebook in 2011.
@@ -66,7 +65,7 @@ React will work with any back-end language, but for project 3 and in our in-clas
 
 ## Components (5 mins)
 
-One of the snarky comments made about React when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In React, we want to move towards more of a component-based separation of concerns.
+One of the snarky comments made about React when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In React, we want to move towards more of a **component-based** separation of concerns.
 
 When taking a look at Facebook, you could think of each status post as a mini-component in React. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
@@ -88,11 +87,11 @@ As you're drawing this out, think about the following questions...
 
 ### [F.I.R.S.T. Components](https://addyosmani.com/first/)
 
-A React component is built to expect an input and render a UI with it. More importantly, a well-structured component only receives data specific to its purpose. For example, our `Post` component from the blog example will only receive `title`, `author` and the like as inputs -- nothing else.
+A React component is built to expect an input and render a UI with it. More importantly, a well-structured component only receives only data specific to its purpose.
 
 This is because React follows a more **functional** approach to programming. For React components under this approach, **the same input will always produce the same output**.
 
-You can build an app in a lot of ways, but if you want to look at some of the best practices, we can talk about what a component should be: **F.I.R.S.T.**
+Best practice is that React components follow the **F.I.R.S.T.** guidelines
 
 #### Focused
 
