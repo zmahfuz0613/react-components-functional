@@ -66,7 +66,7 @@ One comment made about React when it was first open sourced was "Rethinking esta
 
 ![Templates Page](images/templates-page.png)
 ![Components Page](images/components-page.png)
-> Images from https://wanderoak.co/fixed-templates-vs-components/
+> [WanderOak - Fixed Templates vs. Components](https://wanderoak.co/fixed-templates-vs-components/)
 
 When taking a look at Facebook, you could think of each status post as a mini-component in React. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
@@ -74,7 +74,7 @@ Imagine you worked at Facebook when they wanted to shift from using likes to rea
 
 ![Wireframe](images/wireframe.png)
 ![Wireframe with components](images/wireframe_deconstructed.png)
-> Images from http://maketea.co.uk/2014/03/05/building-robust-web-apps-with-react-part-1.html
+> [MakeTea - Building Robust Apps with React](http://maketea.co.uk/2014/03/05/building-robust-web-apps-with-react-part-1.html)
 
 ### [F.I.R.S.T. Components](https://addyosmani.com/first/)
 
@@ -109,19 +109,19 @@ Because the same input will always produce the same output, components are easil
 > If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
 
 
-### Exercise: Identifying Components (10 minutes / 3:10)
+### Exercise: Identifying Components (15 minutes / 3:15)
 
-> 5 minutes exercise. 5 minutes review.
-* Break into groups of three and take a look at Facebook. Identify the visual "components" the website is comprised of. We suggest using markers to draw these out on your table! So something like this...
+> 10 minutes exercise. 5 minutes review.
+* Break into groups of three and take a look at Facebook, Craigslist, Ebay, or a website of your choice. Identify the visual "components" the website is comprised of. We suggest using markers to draw these out on your table! So something like this...
 
 As you're drawing this out, think about the following questions...
 * Where do you see "nested components"? Where do you not?
 * Are there any components that share the same structure?
 * Of these similar components, what is different about them?
 
-## Break: (10 minutes / 3:20)
+## Break: (10 minutes / 3:25)
 
-## Initial Setup (20 minutes / 3:40)
+## Initial Setup (15 minutes / 3:40)
 
 In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application.
 
@@ -356,13 +356,12 @@ class Hello extends Component {
 ### You Do: A Blog Post (25 minutes / 4:55)
 
 Let's have some practice creating a React component from scratch. How about a blog post?
-* Create a `post` object literal in `src/index.js` that has the below properties.
+* Create a `post` object literal in `src/index.js` above `ReactDOM.render()` that has the below properties.
   1. `title`
   2. `author`
   3. `body`
   4. `comments` (array of strings)
-* Render these properties using a Post component (You'll have to create a Post.js file as well)
-* Make sure you render `<Post />` instead of `<App />`
+* Render these properties using a Post component.
 * The composition of your Post is up to you.
 
 #### [Solution](https://github.com/ga-wdi-exercises/simple-react-blog/commit/f1088165898d1a20df956647c8e9b5ed67d9ad32)
