@@ -354,7 +354,7 @@ If you finish early, try experimenting with CSS (Make Sure you use `className` i
 
 ---
 
-## Nested Components (10 minutes / 1:55)
+## Nested Components (10 minutes / 4:55)
 
 #### Q: What problems did you encounter when trying to add multiple comments to your Post?
 
