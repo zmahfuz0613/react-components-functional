@@ -1,10 +1,6 @@
 # Intro to React.js
 
----
-
 ![react-logo](./images/react-white-logo.png)
-
----
 
 ## Learning Objectives
 
@@ -66,13 +62,15 @@ React will work with any back-end language, but for project 3 and in our in-clas
 
 ## Components (5 mins / 3:00)
 
-One comment made about React when it was first open sourced was "Rethinking established best practices". In React, we want to move away from templates and more towards a **component-based** separation of concerns.  [Components vs Templates](https://wanderoak.co/fixed-templates-vs-components/)
+One comment made about React when it was first open sourced was "Rethinking established best practices". In React, we want to move away from templates and more towards a **component-based** separation of concerns.  [Templates vs Components](https://wanderoak.co/fixed-templates-vs-components/)
 
 When taking a look at Facebook, you could think of each status post as a mini-component in React. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
 Imagine you worked at Facebook when they wanted to shift from using likes to reactions. Using traditional JavaScript, HTML, and CSS the shift would make you have to change your code in a bunch of places. Component based architecture allows us to maintain our code more easily.
 
-![Component diagram](https://maketea.co.uk/images/2014-03-05-robust-web-apps-with-react-part-1/wireframe_deconstructed.png)
+![Wireframe](wireframe.png)
+
+![Wireframe with components](wireframe_deconstructed.png)
 
 ### [F.I.R.S.T. Components](https://addyosmani.com/first/)
 
@@ -118,8 +116,6 @@ As you're drawing this out, think about the following questions...
 * Of these similar components, what is different about them?
 
 ## Break: 10 minutes
-
----
 
 ## Initial Setup (20 minutes)
 
