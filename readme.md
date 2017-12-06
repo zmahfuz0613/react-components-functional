@@ -1,10 +1,6 @@
 # Intro to React.js
 
----
-
 ![react-logo](./images/react-white-logo.png)
-
----
 
 ## Learning Objectives
 
@@ -15,22 +11,21 @@
 
 ## Framing
 
-### What is a Frontend Framework? (5 mins)
+### What is a Frontend Framework? (5 mins / 2:35)
 
-- A framework is software providing generic functionality that serves as foundation to build and deploy applications.
-- A framework manages the overall application flow. Simply put, frameworks call the code you write while you call the code provided by a library.
-- While dense, the introduction of the [software framework](https://en.wikipedia.org/wiki/Software_framework) article on wikipedia does an excellent job on an exact definition.
-- The way that Sinatra and Rails are frameworks that run on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client, a front end framework runs in the client's browser (meaning in what language?), receives input from interactions with the page, performs some work that you have defined, and makes any updates necessary.
+- A framework is software providing generic functionality and structure that serves as foundation to build and deploy applications.
+- The introduction of the [software framework](https://en.wikipedia.org/wiki/Software_framework) article on wikipedia does an good job on an exact definition.
+- Sinatra and Rails are frameworks that run on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client.  Front-end frameworks run in the client's browser, receive input from interactions with the page, perform some work that you have defined, and make any updates necessary.
 - There are [many](http://stateofjs.com/2016/frontend/) front end frameworks and each go about solving problems of how state is managed, updated, and represented by a view but there are many commonalities.
 - There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
-### What is ReactJS? (10 mins)
+### What is ReactJS? (10 mins / 2:45)
 
 React is a JavaScript library used to craft modern day UI and views for the front-end in web applications.
 
 > **Selling Point:** By modeling small compatible components that focus on just rendering a view, we can move business logic out of the DOM, and therefore improve our app's performance, maintainability, modularity and readability.
 
-#### Some History 
+#### Some History
 
 The first thing most people hear about React is "Facebook uses it."
 * First used by Facebook in 2011.
@@ -54,45 +49,29 @@ React will work with any back-end language, but for project 3 and in our in-clas
   The visual template the user sees, often populated with data from our models.
 </details>
 
----
+## Components (10 mins / 2:55)
 
+One comment made about React when it was first open sourced was "Rethinking established best practices" which kind of became the React motto.  In React, we want to move away from template pages, away from separating code based purely on file type, and more towards a **component-based** separation of concerns.  [Templates vs Components](https://wanderoak.co/fixed-templates-vs-components/)
 
-### Exercise: Thinkster RealWorld Applications (10 minutes / 5 minutes review)
-
-* With the other people at your table, look at the code on the RealWorld ToDo repository [here](https://github.com/gothinkster/realworld). This site shows the same to do list application written in a bunch of different front end frameworks.
-* For this exercise, look at the VanillaJS and React examples on their site.
-* With your neighbor, discuss what differences you see between the React code and the vanilla JavaScript code. Write down your findings on the table next to you.
-
-
-## Components (5 mins)
-
-One of the snarky comments made about React when it was first open sourced was. "Rethinking established best practices". Traditionally we're used to a more MVC approach for separation of concerns. In React, we want to move towards more of a component-based separation of concerns.
+![Templates Page](images/templates-page.png)
+![Components Page](images/components-page.png)
+> [WanderOak - Fixed Templates vs. Components](https://wanderoak.co/fixed-templates-vs-components/)
 
 When taking a look at Facebook, you could think of each status post as a mini-component in React. And a list of those updates, is a component that contains several of those mini-components. You could take that one step further and think of the Facebook app, as one giant component with several components within it. (Things like the list of status updates, the friends list, the header, etc...)
 
 Imagine you worked at Facebook when they wanted to shift from using likes to reactions. Using traditional JavaScript, HTML, and CSS the shift would make you have to change your code in a bunch of places. Component based architecture allows us to maintain our code more easily.
 
-
-### Exercise: Identifying Components (10 minutes)
-
-> 5 minutes exercise. 5 minutes review.
-* Break into groups of three and take a look at Facebook. Identify the visual "components" the website is comprised of. We suggest using markers to draw these out on your table! So something like this...
-
-![Component diagram](https://maketea.co.uk/images/2014-03-05-robust-web-apps-with-react-part-1/wireframe_deconstructed.png)
-
-As you're drawing this out, think about the following questions...
-* Where do you see "nested components"? Where do you not?
-* Are there any components that share the same structure?
-* Of these similar components, what is different about them?
-
+![Wireframe](images/wireframe.png)
+![Wireframe with components](images/wireframe_deconstructed.png)
+> [MakeTea - Building Robust Apps with React](http://maketea.co.uk/2014/03/05/building-robust-web-apps-with-react-part-1.html)
 
 ### [F.I.R.S.T. Components](https://addyosmani.com/first/)
 
-A React component is built to expect an input and render a UI with it. More importantly, a well-structured component only receives data specific to its purpose. For example, our `Post` component from the blog example will only receive `title`, `author` and the like as inputs -- nothing else.
+A React component is built to expect an input and render a UI with it. More importantly, a well-structured component only receives only data specific to its purpose.
 
 This is because React follows a more **functional** approach to programming. For React components under this approach, **the same input will always produce the same output**.
 
-You can build an app in a lot of ways, but if you want to look at some of the best practices, we can talk about what a component should be: **F.I.R.S.T.**
+Best practice is that React components follow the **F.I.R.S.T.** guidelines
 
 #### Focused
 
@@ -118,10 +97,20 @@ Because the same input will always produce the same output, components are easil
 
 > If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
 
----
-### Break: 10 minutes
 
-## Initial Setup (20 minutes)
+## Exercise: Identifying Components (15 minutes / 3:10)
+
+> 10 minutes exercise. 5 minutes review.
+* Break into groups of three and take a look at Facebook, Craigslist, Ebay, or a website of your choice. Identify the visual "components" the website is comprised of. Use markers to draw these out on the wall.
+
+As you're drawing this out, think about the following questions...
+* Where do you see "nested components"? Where do you not?
+* Are there any components that share the same structure?
+* Of these similar components, what is different about them?
+
+## Break: (10 minutes / 3:20)
+
+## Initial Setup (15 minutes / 3:35)
 
 In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application.
 
@@ -129,7 +118,7 @@ In order to create a new project and to get our development environment setup, w
 
 It uses Webpack which is a build tool that enables many of the features listed above. It also includes Babel which transpiles our JavaScript from ES6 to be compatible with older browsers. It also includes Autoprefixer for the cross browser CSS compatibility, ESLint for linting, and Jest for testing.
 
-Later in this class we will be giving a workshop on how to set this up ourselves, but for now `create-react-app` allows us to worry more about our code than configuration!
+You can also set up all this yourself, but for now `create-react-app` allows us to worry more about our code and less about configuration.
 
 ```bash
 $ npm i -g create-react-app
@@ -163,24 +152,19 @@ Along with installing the necessary dependencies, it creates an initial app skel
 
 Most of the important files, which are primarily the ones where we will be working today, are in the `/src` directory.
 
----
-
-### Stop / Catch Up / Investigate
-
 Take some time and look at what's been generated. Specifically look in `App.js` and `index.js`
 
 ---
 
-### We Do: Hello World - A Very Basic Component (10 minutes)
+### We Do: Hello World - A Very Basic Component (10 minutes / 3:45)
 
 The basic unit you'll be working with in ReactJS is a **component**.
-* It sounds like a simple word, but using "components" is a pretty different way of approaching web development.
 
-* Components can be thought of as functional elements that takes in data and as a result, produce a dynamic UI.
+* Components can be thought of as functional elements that take in data and as a result, produce a dynamic UI.
 
 Throughout class we have separated HTML, CSS and Javascript.
 * With components, the lines between those three become a bit blurry.
-* Instead, we organize our web apps according to small, reusable components that define their own content, presentation and behavior.
+* Instead, we organize our web apps according to small, reusable components that define their own content, presentation and behavior.  
 
 What does a component look like? Let's start with a simple "Hello World" example...
 
@@ -219,7 +203,13 @@ Every component has, at minimum, a render method. It generates a **Virtual DOM**
 ##### `export default Hello`
 This exposes the Hello class to other files which import from the App.js file. The `default` keyword means that any import that's name doesn't match a named export will automatically revert to this. Only one default is allowed per file.
 
-#### JSX (5 minutes)
+### JSX (5 minutes / 3:50)
+
+> Hey you got your html in my javascript!
+>
+> You got your javascript in my html!
+>
+> (https://youtu.be/O7oD_oX-Gio?t=5s)
 
 Let's talk about the value that the render method returns. It looks an awful lot like an HTML heading, but it's not. We often write out React components in JSX.
 
@@ -234,7 +224,7 @@ The JSX creates a heading with 'Hello World!'.
 > React can be written without JSX. If you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/).  
 
 
-## Virtual DOM (10 minutes)
+## Virtual DOM (5 minutes / 3:55)
 
 You may have noticed that our `src/index.js` code mentions ReactDOM. ReactDOM doesn't refer to the same DOM we know. Instead, it refers to a Virtual DOM. The Virtual DOM is a key piece of how React works.
 
@@ -268,16 +258,11 @@ ReactDOM.render(
   1. The component.
   2. The DOM element we want to append it to.
 
-#### Review
-What is `<Hello />` written in? **JSX.**
-* When we say `<Hello />`, in plain Javascript we are actually saying `React.DOM.div( null, "Hello world.")`
-  * Basically, a string of React methods that create a virtual DOM node.
-
 > **NOTE:** Whenever you use a self-closing tag in JSX, you **MUST** end it with a `/` like `<Hello />` in the above example.
 
 ---
 
-### Hello World: A Little Dynamic (15 minutes)
+### Hello World: A Little Dynamic (15 minutes / 4:10)
 
 Our `Hello` component isn't too helpful. Let's make it more interesting.
 * Rather than simply display "Hello world", let's display a greeting to the user.
@@ -347,28 +332,115 @@ class Hello extends Component {
 
 > **NOTE:** The return statement in `render` can only return one DOM element. You can, however, place multiple elements within a parent DOM element, like we do in the previous example with `<div>`.
 
----
-
-## Break (10 minutes)
+## Break (10 minutes / 4:20)
 
 ---
 
-### You Do: A Blog Post (25 minutes)
+## You Do: A Blog Post (25 minutes / 4:45)
+> 20 min to work, 5 min review
 
 Let's have some practice creating a React component from scratch. How about a blog post?
-* Create a `post` object literal in `src/index.js` that has the below properties.
+* Create a `post` object literal in `src/index.js` above `ReactDOM.render()` that has the below properties.
   1. `title`
   2. `author`
   3. `body`
   4. `comments` (array of strings)
 * Render these properties using a Post component.
-* The HTML (or more accurately, JSX) composition of your Post is up to you.
+* The composition of your Post is up to you.
+
+If you finish early, try experimenting with CSS (Make Sure you use `className` instead of `class` in `JSX`!)
 
 #### [Solution](https://github.com/ga-wdi-exercises/simple-react-blog/commit/f1088165898d1a20df956647c8e9b5ed67d9ad32)
 
 ---
 
-## Closing (5 minutes)
+## Nested Components (10 minutes / 4:55)
+
+#### Q: What problems did you encounter when trying to add multiple comments to your Post?
+
+It would be a pain to have to explicitly define every comment inside of `<Post />`, especially if each comment itself had multiple properties.
+* This problem is a tell tale sign that our separation of concerns is being stretched, and it's time to break things into a new component.
+
+We can nest a Comment component within a Post component.
+* We create these comments the same way we did with posts: `extends Component` and `.render`
+* Then we can reference a comment using `<Comment />` inside of Post's render method.
+
+Let's create a new file for our Comment component, `src/Comment.js`...
+
+```js
+import React, {Component} from 'react'
+
+class Comment extends Component {
+  render () {
+    return (
+      <div>
+        <p>{this.props.message}</p>
+      </div>
+    )
+  }
+}
+
+export default Comment
+```
+
+Then in `src/App.js`, we need to load in our `Comment` component and render it inside of our `Post` component...
+
+```js
+import React, { Component } from 'react';
+// Load in Comment component
+import Comment from './Comment.js'
+
+
+class Post extends Component {
+  render() {
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <p>By {this.props.author}</p>
+        <div>
+          <p>{this.props.body}</p>
+        </div>
+        <h3>Comments:</h3>
+        // Render Comment component, passing in data
+        <Comment message={this.props.comments[0]} />
+      </div>
+    );
+  }
+}
+
+export default Post;
+```
+
+> **Note**: We could put all of our code in one file, but it's considered a good practice to break components out into different files to help practice separation of concerns. The only downside is we have to be extra conscious of remembering to **export / import** each component to where it's rendered.
+
+The above code works, but we'd have to hard-code all of our `Comments`.  This is not very dry and our code will not dynamically change.  The best way to handle this is to set a variable equal to all of the `<Comments />` for this post.  We can do this using `.map` in `Post's` `render` method.
+
+We can use `.map` in `Post's` `render` method to avoid having to hard-code all of our `Comments`
+
+```js
+class Post extends Component {
+  render() {
+    let comments = this.props.comments.map((comment, index) => (
+      <Comment message={comment} key={index}/>
+    ))
+    return(
+      <div className='post-page'>
+        <h1>{this.props.title}</h1>
+        <h2>By {this.props.author}</h2>
+        <p>{this.props.body}</p>
+
+        <h3>Comments</h3>
+        {comments}
+      </div>
+    )
+  }
+}
+```
+
+---
+
+## Closing (5 minutes / Rest of Class)
+
 * Why do we use components in React?
 * What is the Virtual DOM?
 * What is JSX?
