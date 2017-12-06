@@ -62,7 +62,7 @@ React will work with any back-end language, but for project 3 and in our in-clas
 
 ## Components (5 mins / 3:00)
 
-One comment made about React when it was first open sourced was "Rethinking established best practices". In React, we want to move away from templates and more towards a **component-based** separation of concerns.  [Templates vs Components](https://wanderoak.co/fixed-templates-vs-components/)
+One comment made about React when it was first open sourced was "Rethinking established best practices" which kind of became the React motto.  In React, we want to move away from template pages, away from separating code based purely on file type, and more towards a **component-based** separation of concerns.  [Templates vs Components](https://wanderoak.co/fixed-templates-vs-components/)
 
 ![Templates Page](images/templates-page.png)
 ![Components Page](images/components-page.png)
@@ -109,7 +109,7 @@ Because the same input will always produce the same output, components are easil
 > If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
 
 
-### Exercise: Identifying Components (10 minutes / 3:40)
+### Exercise: Identifying Components (10 minutes / 3:10)
 
 > 5 minutes exercise. 5 minutes review.
 * Break into groups of three and take a look at Facebook. Identify the visual "components" the website is comprised of. We suggest using markers to draw these out on your table! So something like this...
@@ -119,9 +119,9 @@ As you're drawing this out, think about the following questions...
 * Are there any components that share the same structure?
 * Of these similar components, what is different about them?
 
-## Break: 10 minutes
+## Break: (10 minutes / 3:20)
 
-## Initial Setup (20 minutes)
+## Initial Setup (20 minutes / 3:40)
 
 In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application.
 
@@ -129,7 +129,7 @@ In order to create a new project and to get our development environment setup, w
 
 It uses Webpack which is a build tool that enables many of the features listed above. It also includes Babel which transpiles our JavaScript from ES6 to be compatible with older browsers. It also includes Autoprefixer for the cross browser CSS compatibility, ESLint for linting, and Jest for testing.
 
-Later in this class we will be giving a workshop on how to set this up ourselves, but for now `create-react-app` allows us to worry more about our code than configuration!
+You can also set up all this yourself, but for now `create-react-app` allows us to worry more about our code and less about configuration.
 
 ```bash
 $ npm i -g create-react-app
@@ -171,7 +171,7 @@ Take some time and look at what's been generated. Specifically look in `App.js` 
 
 ---
 
-### We Do: Hello World - A Very Basic Component (10 minutes)
+### We Do: Hello World - A Very Basic Component (10 minutes / 3:50)
 
 The basic unit you'll be working with in ReactJS is a **component**.
 * It sounds like a simple word, but using "components" is a pretty different way of approaching web development.
@@ -180,7 +180,7 @@ The basic unit you'll be working with in ReactJS is a **component**.
 
 Throughout class we have separated HTML, CSS and Javascript.
 * With components, the lines between those three become a bit blurry.
-* Instead, we organize our web apps according to small, reusable components that define their own content, presentation and behavior.
+* Instead, we organize our web apps according to small, reusable components that define their own content, presentation and behavior.  This means often having all 3 languages in the same file.  
 
 What does a component look like? Let's start with a simple "Hello World" example...
 
@@ -219,7 +219,11 @@ Every component has, at minimum, a render method. It generates a **Virtual DOM**
 ##### `export default Hello`
 This exposes the Hello class to other files which import from the App.js file. The `default` keyword means that any import that's name doesn't match a named export will automatically revert to this. Only one default is allowed per file.
 
-#### JSX (5 minutes)
+### JSX (5 minutes / 3:55)
+
+> Hey you got your html in my javascript!
+> You got your javascript in my html!
+> (https://youtu.be/O7oD_oX-Gio?t=5s)
 
 Let's talk about the value that the render method returns. It looks an awful lot like an HTML heading, but it's not. We often write out React components in JSX.
 
@@ -234,7 +238,7 @@ The JSX creates a heading with 'Hello World!'.
 > React can be written without JSX. If you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/).  
 
 
-## Virtual DOM (10 minutes)
+## Virtual DOM (10 minutes / 4:05)
 
 You may have noticed that our `src/index.js` code mentions ReactDOM. ReactDOM doesn't refer to the same DOM we know. Instead, it refers to a Virtual DOM. The Virtual DOM is a key piece of how React works.
 
@@ -277,7 +281,7 @@ What is `<Hello />` written in? **JSX.**
 
 ---
 
-### Hello World: A Little Dynamic (15 minutes)
+### Hello World: A Little Dynamic (15 minutes / 4:20)
 
 Our `Hello` component isn't too helpful. Let's make it more interesting.
 * Rather than simply display "Hello world", let's display a greeting to the user.
@@ -347,13 +351,9 @@ class Hello extends Component {
 
 > **NOTE:** The return statement in `render` can only return one DOM element. You can, however, place multiple elements within a parent DOM element, like we do in the previous example with `<div>`.
 
----
+## Break (10 minutes / 4:30)
 
-## Break (10 minutes)
-
----
-
-### You Do: A Blog Post (25 minutes)
+### You Do: A Blog Post (25 minutes / 4:55)
 
 Let's have some practice creating a React component from scratch. How about a blog post?
 * Create a `post` object literal in `src/index.js` that has the below properties.
@@ -361,14 +361,16 @@ Let's have some practice creating a React component from scratch. How about a bl
   2. `author`
   3. `body`
   4. `comments` (array of strings)
-* Render these properties using a Post component.
-* The HTML (or more accurately, JSX) composition of your Post is up to you.
+* Render these properties using a Post component (You'll have to create a Post.js file as well)
+* Make sure you render `<Post />` instead of `<App />`
+* The composition of your Post is up to you.
 
 #### [Solution](https://github.com/ga-wdi-exercises/simple-react-blog/commit/f1088165898d1a20df956647c8e9b5ed67d9ad32)
 
 ---
 
-## Closing (5 minutes)
+## Closing (5 minutes / Rest of Class)
+
 * Why do we use components in React?
 * What is the Virtual DOM?
 * What is JSX?
