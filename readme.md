@@ -14,8 +14,8 @@
 ### What is a Frontend Framework? (5 mins / 2:35)
 
 - A framework is software providing generic functionality and structure that serves as foundation to build and deploy applications.
-- The introduction of the [software framework](https://en.wikipedia.org/wiki/Software_framework) article on wikipedia does an good job on an exact definition.
 - Sinatra and Rails are frameworks that run on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client.  Front-end frameworks run in the client's browser, receive input from interactions with the page, perform some work that you have defined, and make any updates necessary.
+- Front end frameworks can help get your apps up and running faster, while helping standardize code and giving your increased functionality and performance.  
 - There are [many](http://stateofjs.com/2016/frontend/) front end frameworks and each go about solving problems of how state is managed, updated, and represented by a view but there are many commonalities.
 - There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
