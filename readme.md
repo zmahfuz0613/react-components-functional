@@ -15,11 +15,11 @@
 
 - A framework is software providing generic functionality and structure that serves as foundation to build and deploy applications.
 - Sinatra and Rails are frameworks that run on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client.  Front-end frameworks run in the client's browser, receive input from interactions with the page, perform some work that you have defined, and make any updates necessary.
-- Front end frameworks can help get your apps up and running faster, while helping standardize code and giving your increased functionality and performance.  
+- Frameworks can help standardize code, give you additional functionality and performance, and can help get your code off the ground faster.  
 - There are [many](http://stateofjs.com/2016/frontend/) front end frameworks and each go about solving problems of how state is managed, updated, and represented by a view but there are many commonalities.
 - There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
-### What is ReactJS? (10 mins / 2:45)
+### What is ReactJS? (5 mins / 2:40)
 
 React is a JavaScript library used to craft modern day UI and views for the front-end in web applications.
 
@@ -49,7 +49,7 @@ React will work with any back-end language, but for project 3 and in our in-clas
   The visual template the user sees, often populated with data from our models.
 </details>
 
-## Components (10 mins / 2:55)
+## Components (10 mins / 2:50)
 
 One comment made about React when it was first open sourced was "Rethinking established best practices" which kind of became the React motto.  In React, we want to move away from template pages, away from separating code based purely on file type, and more towards a **component-based** separation of concerns.  [Templates vs Components](https://wanderoak.co/fixed-templates-vs-components/)
 
@@ -98,7 +98,7 @@ Because the same input will always produce the same output, components are easil
 > If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
 
 
-## Exercise: Identifying Components (15 minutes / 3:10)
+## Exercise: Identifying Components (15 minutes / 3:05)
 
 > 10 minutes exercise. 5 minutes review.
 * Break into groups of three and take a look at Facebook, Craigslist, Ebay, or a website of your choice. Identify the visual "components" the website is comprised of. Use markers to draw these out on the wall.
@@ -108,9 +108,7 @@ As you're drawing this out, think about the following questions...
 * Are there any components that share the same structure?
 * Of these similar components, what is different about them?
 
-## Break: (10 minutes / 3:20)
-
-## Initial Setup (15 minutes / 3:35)
+## Initial Setup (20 minutes / 3:25)
 
 In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application.
 
@@ -154,6 +152,8 @@ Most of the important files, which are primarily the ones where we will be worki
 
 Take some time and look at what's been generated. Specifically look in `App.js` and `index.js`
 
+
+## Break: (10 minutes / 3:35)
 ---
 
 ### We Do: Hello World - A Very Basic Component (10 minutes / 3:45)
