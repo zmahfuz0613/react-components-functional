@@ -68,9 +68,9 @@ When taking a look at Facebook, you could think of each status post as a mini-co
 
 Imagine you worked at Facebook when they wanted to shift from using likes to reactions. Using traditional JavaScript, HTML, and CSS the shift would make you have to change your code in a bunch of places. Component based architecture allows us to maintain our code more easily.
 
-![Wireframe](wireframe.png)
+![Wireframe](images/wireframe.png)
 
-![Wireframe with components](wireframe_deconstructed.png)
+![Wireframe with components](images/wireframe_deconstructed.png)
 
 ### [F.I.R.S.T. Components](https://addyosmani.com/first/)
 
