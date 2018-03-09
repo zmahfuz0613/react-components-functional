@@ -11,7 +11,7 @@
 
 ## Framing
 
-### What is a Frontend Framework? (5 mins / 2:35)
+### What is a Frontend Framework? (5 min / 10:05)
 
 - A framework is software providing generic functionality and structure that serves as foundation to build and deploy applications.
 - Express is a framework that runs on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client.  Front-end frameworks run in the client's browser, receive input from interactions with the page, perform some work that you have defined, and make any updates necessary.
@@ -19,7 +19,7 @@
 - There are [many](https://stateofjs.com/2017/front-end/) front end frameworks and each go about solving problems of how state is managed, updated, and represented by a view but there are many commonalities.
 - There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
-### What is ReactJS? (5 mins / 2:40)
+### What is ReactJS? (5 min / 10:10)
 
 React is a JavaScript library used to craft modern day UI and views for the front-end in web applications.
 
@@ -49,7 +49,7 @@ React will work with any back-end language, but for project 3 and in our in-clas
   The visual template the user sees, often populated with data from our models.
 </details>
 
-## Components (10 mins / 2:50)
+## Components (10 min / 10:20)
 
 One comment made about React when it was first open sourced was "Rethinking established best practices" which kind of became the React motto.  In React, we want to move away from template pages, away from separating code based purely on file type, and more towards a **component-based** separation of concerns.  [Templates vs Components](https://wanderoak.co/fixed-templates-vs-components/)
 
@@ -65,9 +65,26 @@ Imagine you worked at Facebook when they wanted to shift from using likes to rea
 ![Wireframe with components](images/wireframe_deconstructed.png)
 > [MakeTea - Building Robust Apps with React](http://maketea.co.uk/2014/03/05/building-robust-web-apps-with-react-part-1.html)
 
+Notice the structure of how the various components are nested. 
+```
+- TubeTracker
+    - Network
+        - Line
+    - Predictions
+        - DepartureBoard
+            - Trains
+```
+
+TubeTracker contains the application
+Network displays each line on the network
+Line displays the stations on a line
+Predictions controls the state of the departure board
+DepartureBoard displays the current station and platforms
+Trains displays the trains due to arrive at a platform
+
 ### [F.I.R.S.T. Components](https://addyosmani.com/first/)
 
-A React component is built to expect an input and render a UI with it. More importantly, a well-structured component only receives only data specific to its purpose.
+A React component is built to expect an input and render a UI with it. More importantly, a well-structured component only receives data specific to its purpose.
 
 This is because React follows a more **functional** approach to programming. For React components under this approach, **the same input will always produce the same output**.
 
@@ -98,7 +115,7 @@ Because the same input will always produce the same output, components are easil
 > If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
 
 
-## Exercise: Identifying Components (15 minutes / 3:05)
+## Exercise: Identifying Components (15 min / 10:35)
 
 > 10 minutes exercise. 5 minutes review.
 * Break into groups of three and take a look at Facebook, Craigslist, Ebay, or a website of your choice. Identify the visual "components" the website is comprised of. Use markers to draw these out on the wall.
@@ -108,13 +125,13 @@ As you're drawing this out, think about the following questions...
 * Are there any components that share the same structure?
 * Of these similar components, what is different about them?
 
-## Initial Setup (20 minutes / 3:25)
+## Initial Setup (20 min / 10:55)
 
 In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application.
 
 `create-react-app` is an NPM package also built by Facebook that writes our build dependencies for us so that we can do less configuration. It allows us to use React, JSX, and ES6. It also allows us to import our CSS, it autoprefixes our CSS so that we don't have to worry about cross browser compatibility, it gives us a dev server to run, and it enables hot reloading which updates the code in our browser without us refreshing the page.
 
-It uses Webpack which is a build tool that enables many of the features listed above. It also includes Babel which transpiles our JavaScript from ES6 to be compatible with older browsers. It also includes Autoprefixer for the cross browser CSS compatibility, ESLint for linting, and Jest for testing.
+It uses Webpack which is a build tool that enables many of the features listed above. It also includes Babel which transpiles our JavaScript from ES6 to be compatible with older browsers. It also includes Autoprefixer for CSS compatibility, ESLint for linting, and Jest for testing.
 
 You can also set up all this yourself, but for now `create-react-app` allows us to worry more about our code and less about configuration.
 
@@ -122,7 +139,7 @@ You can also set up all this yourself, but for now `create-react-app` allows us 
 $ npm i -g create-react-app
 $ create-react-app blog-app
 $ cd blog-app
-$ atom .
+$ code .
 $ npm run start
 ```
 
@@ -153,10 +170,10 @@ Most of the important files, which are primarily the ones where we will be worki
 Take some time and look at what's been generated. Specifically look in `App.js` and `index.js`
 
 
-## Break: (10 minutes / 3:35)
+## Break: (10 min / 11:05)
 ---
 
-### We Do: Hello World - A Very Basic Component (10 minutes / 3:45)
+### We Do: Hello World - A Very Basic Component (10 min / 11:15)
 
 The basic unit you'll be working with in ReactJS is a **component**.
 
@@ -203,7 +220,7 @@ Every component has, at minimum, a render method. It generates a **Virtual DOM**
 ##### `export default Hello`
 This exposes the Hello class to other files which import from the App.js file. The `default` keyword means that any import that's name doesn't match a named export will automatically revert to this. Only one default is allowed per file.
 
-### JSX (5 minutes / 3:50)
+### JSX (5 min / 11:20)
 
 > Hey you got your html in my javascript!
 >
@@ -224,7 +241,7 @@ The JSX creates a heading with 'Hello World!'.
 > React can be written without JSX. If you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/).  
 
 
-## Virtual DOM (5 minutes / 3:55)
+## Virtual DOM (5 min / 11:25)
 
 You may have noticed that our `src/index.js` code mentions ReactDOM. ReactDOM doesn't refer to the same DOM we know. Instead, it refers to a Virtual DOM. The Virtual DOM is a key piece of how React works.
 
@@ -262,7 +279,7 @@ ReactDOM.render(
 
 ---
 
-### Hello World: A Little Dynamic (15 minutes / 4:10)
+### Hello World: A Little Dynamic (15 min / 11:40)
 
 Our `Hello` component isn't too helpful. Let's make it more interesting.
 * Rather than simply display "Hello world", let's display a greeting to the user.
@@ -332,11 +349,11 @@ class Hello extends Component {
 
 > **NOTE:** The return statement in `render` can only return one DOM element. You can, however, place multiple elements within a parent DOM element, like we do in the previous example with `<div>`.
 
-## Break (10 minutes / 4:20)
+## Break (10 min / 11:50)
 
 ---
 
-## You Do: A Blog Post (25 minutes / 4:45)
+## You Do: A Blog Post (25 min / 12:15)
 > 20 min to work, 5 min review
 
 Let's have some practice creating a React component from scratch. How about a blog post?
@@ -354,7 +371,7 @@ If you finish early, try experimenting with CSS (Make Sure you use `className` i
 
 ---
 
-## Nested Components (10 minutes / 4:55)
+## Nested Components (10 minutes / 12:25)
 
 #### Q: What problems did you encounter when trying to add multiple comments to your Post?
 
@@ -362,7 +379,7 @@ It would be a pain to have to explicitly define every comment inside of `<Post /
 * This problem is a tell tale sign that our separation of concerns is being stretched, and it's time to break things into a new component.
 
 We can nest a Comment component within a Post component.
-* We create these comments the same way we did with posts: `extends Component` and `.render`
+* We create these comments the same way we did with posts: `extends Component` and `render`
 * Then we can reference a comment using `<Comment />` inside of Post's render method.
 
 Let's create a new file for our Comment component, `src/Comment.js`...
@@ -439,7 +456,7 @@ class Post extends Component {
 
 ---
 
-## Closing (5 minutes / Rest of Class)
+## Closing (5 min / Rest of Class)
 
 * Why do we use components in React?
 * What is the Virtual DOM?
