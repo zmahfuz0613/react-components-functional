@@ -57,8 +57,6 @@ A core part of the React philosophy is to build everything out using components,
 
 You can think of a component as a small piece of a webpage that has a singular purpose. It can be as little as a single `<input>` field or as big as a sidebar containing other components. Yes, components can hold other components.
 
-
-
 ![Templates Page](images/templates-page.png)
 
 Going back to how handlebars worked, we had our `layout.hbs` file and a bunch of different files we called `views`.
@@ -70,22 +68,24 @@ Our layout file might have looked something like this:
   <head>
   </head>
   <body>
-    {{body}}
+    {{{ body }}}
   </body>
 </html>
 ```
 
-Depending on the route we were on, the view files were rendered in place of the `{{body}}` placeholder and that was just fine. But it's not the only way.
+Depending on the route we were on, the view files were rendered in place of the
+`{{body}}` placeholder and that was just fine. But it's not the only way.
 
 ![Components Page](images/components-page.png)
 > [WanderOak - Fixed Templates vs. Components](https://wanderoak.co/fixed-templates-vs-components/)
 
-With components, we define them once (each React component should be defined in its own file), and we can reuse them as many times as we want, on different pages. 
+With components, we define them once (each React component should be defined in
+its own file), and we can reuse them as many times as we want, on different
+pages.
 
 When we need to make updates, we only have to make those updates in one file.
 
 If you used partials in handlebars, the idea is similar.
-
 
 ### Examples!
 
@@ -384,8 +384,6 @@ class Hello extends Component {
 
 > **NOTE:** The return statement in `render` can only return one DOM element. You can, however, place multiple elements within a parent DOM element, like we do in the previous example with `<div>`.
 
----
-
 ## You Do: A Blog Post (15 min / 1:55)
 
 > 10 min to work, 5 min review
@@ -400,9 +398,7 @@ Let's have some practice creating a React component from scratch. How about a bl
 * Render these properties using a Post component.
 * The composition of your Post is up to you.
 
-#### [Solution](https://git.generalassemb.ly/dc-wdi-react-redux/simple-react-blog/tree/post-solution)
-
----
+### [Solution](https://git.generalassemb.ly/dc-wdi-react-redux/simple-react-blog/tree/post-solution)
 
 ## Nested Components (30 minutes / 2:25)
 
