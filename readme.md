@@ -191,7 +191,7 @@ with the HTML-like syntax called JSX.
 
 Let's talk about that weird HTML-like stuff that we're returning from this
 function. It looks a lot like HTML, but it's not! It's JSX,
-[an XML-lke syntax that compiles to JavaScript](http://blog.yld.io/2015/06/10/getting-started-with-react-and-node-js/#.V8eDk5MrJPN).
+[an XML-lke syntax that compiles to JavaScript](https://reactjs.org/docs/introducing-jsx.html).
 We use it in React because the syntax is so nice to write. It does get compiled
 to lightweight JavaScript objects, which React uses to build the HTML that gets
 rendered in the browser.
@@ -253,8 +253,8 @@ Next, we'll update our `App` component:
 ```jsx
 import React, { Component } from "react";
 
-function App() {
-  return <h1>Hello {this.props.name}!</h1>;
+function App(props) {
+  return <h1>Hello {props.name}!</h1>;
 }
 
 export default App;
@@ -291,11 +291,11 @@ ReactDOM.render(
 Then in our component definition we have access to both values:
 
 ```jsx
-function App() {
+function App(props) {
   return (
     <div>
-      <h1>Hello {this.props.name}</h1>
-      <p>You are {this.props.age} years old</p>
+      <h1>Hello {props.name}</h1>
+      <p>You are {props.age} years old</p>
     </div>
   );
 }
@@ -307,16 +307,17 @@ function App() {
 
 ## You Do: Props
 
-Above the `return` in `App`, add the following: `console.log(this)`
+Above the `return` in `App`, add the following line of code:
+`console.log(props)`
 
 Your component should look like this now:
 
 ```jsx
 import React, { Component } from "react";
 
-function App() {
-  console.log(this);
-  return <h1>Hello {this.props.name}!</h1>;
+function App(props) {
+  console.log(props);
+  return <h1>Hello {props.name}!</h1>;
 }
 
 export default App;
@@ -362,10 +363,10 @@ Our `Comment` component will be defined inside of `src/Comment.js` and look like
 this:
 
 ```jsx
-import React, { Component } from "react";
+import React from "react";
 
-function Comment() {
-  return <li>{this.props.message}</li>;
+function Comment(props) {
+  return <li>{props.message}</li>;
 }
 
 export default Comment;
@@ -377,19 +378,19 @@ can _import_ it in another file.
 We'll update our `Post` component to look like this:
 
 ```jsx
-import React, { Component } from "react";
+import React from "react";
 import Comment from "./Comment";
 
-function Post() {
+function Post(props) {
   return (
     <div>
-      <h1>{this.props.title}</h1>
-      <p>By: {this.props.author}</p>
-      <div>{this.props.body}</div>
+      <h1>{props.title}</h1>
+      <p>By: {props.author}</p>
+      <div>{props.body}</div>
       <ul>
-        <Comment message={this.props.comments[0]} />
-        <Comment message={this.props.comments[1]} />
-        <Comment message={this.props.comments[2]} />
+        <Comment message={props.comments[0]} />
+        <Comment message={props.comments[1]} />
+        <Comment message={props.comments[2]} />
       </ul>
     </div>
   );
@@ -407,19 +408,19 @@ Since `comments` (in index.js) is an array, we can use `.map` wherever we've
 passed it down. In this case, we've got it in the props object.
 
 ```jsx
-import React, { Component } from "react";
+import React from "react";
 import Comment from "./Comment";
 
-function Post() {
-  let comments = this.props.comments.map((comment, index) => (
+function Post(props) {
+  let comments = props.comments.map((comment, index) => (
     <Comment message={comment} key={index} />
   ));
 
   return (
     <div>
-      <h1>{this.props.title}</h1>
-      <p>By: {this.props.author}</p>
-      <div>{this.props.body}</div>
+      <h1>{props.title}</h1>
+      <p>By: {props.author}</p>
+      <div>{props.body}</div>
       <ul>{comments}</ul>
     </div>
   );
@@ -432,6 +433,116 @@ export default Post;
 
 That's a very brief introduction to React, defining components with functions,
 and passing in data with props.
+
+## Additional Resources
+
+### Destructuring the `props` Object
+
+We have `props.something` throughout our JSX code. This can lead to a lot of
+repetition, as it kind of already has for us. JavaScript provides a way for us
+to cut down on that repetition through object destructuring.
+
+#### Destructuring
+
+Destructuring is exactly as the name suggests: _de_-structuring an object (as
+in, breaking apart it's structure). For a simple object, it looks like this:
+
+```js
+// First, we define a simple object:
+let person = {
+  name: "Big Bird",
+  age: 25
+};
+
+// Then, we 'destructure' that object:
+let { name, age } = person;
+
+// Then, we print the values to the console:
+console.log(name); // 'Big Bird'
+console.log(age); // 25
+```
+
+In the above snippet, we're declaring variables that extract the values with the
+same name from the `person` object. This part is really important: **the
+variable(s) must have the same name as the key(s) in the object.**
+
+#### Updating `Post`
+
+Using destructuring, we can now update our `Post` component, to make the JSX a
+little more legible:
+
+```jsx
+import React from "react";
+import Comment from "./Comment";
+
+function Post(props) {
+  let { title, author, body, comments } = props;
+
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>By: {author}</p>
+      <div>{body}</div>
+      <ul>
+        {comments.map((comment, index) => (
+          <Comment message={comment} key={index} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Post;
+```
+
+> Note that we also moved `comments.map` inline, with the JSX. You'll see this
+> pattern a lot (and use it a lot!).
+
+#### Destructuring Object Parameters
+
+Destructuring applys when an object is passed in as an argument to a function.
+This is really powerful!
+
+```js
+// First, we define a simple object:
+let person = {
+  name: "Big Bird",
+  age: 25
+};
+
+// Then, we define a function that takes that `person` object:
+function sayHello({ name, age }) {
+  console.log(`Hello ${name}, how does it feel to be ${age} years old?`);
+}
+
+// Then, we execute `sayHello` passing in `person`:
+
+sayHello(person); // 'Hello Big Bird, how does it feel to be 25 years old?'
+```
+
+If we apply this in our `Post` component, then it would look like this:
+
+```jsx
+import React from "react";
+import Comment from "./Comment";
+
+function Post({ title, author, body, comments }) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>By: {author}</p>
+      <div>{body}</div>
+      <ul>
+        {comments.map((comment, index) => (
+          <Comment message={comment} key={index} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Post;
+```
 
 ## [License](LICENSE)
 
