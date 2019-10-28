@@ -115,10 +115,10 @@ data and as a result, produce a dynamic UI.
 
 > Your user interface is a _function_ of your data
 
-Throughout this demo we have separated HTML, CSS and Javascript in different
-files. With components, the lines between those three become a bit blurry.
-Instead, we organize our web apps according to small, reusable components that
-define their own content, presentation and behavior.
+Throughout this course so far we have separated HTML, CSS and Javascript in
+different files. With components, the lines between those three become a bit
+blurry. Instead, we organize our web apps according to small, reusable
+components that define their own content, presentation and behavior.
 
 What does a component look like? Let's start with a simple "Hello World"
 example.
