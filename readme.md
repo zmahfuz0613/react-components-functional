@@ -72,6 +72,25 @@ code .
 npm run start
 ```
 
+### SEI 34 Notes
+
+The [offical React docs](https://reactjs.org/docs/create-a-new-react-app.html)
+suggest using `npx`, a modern javascript package runner, to run
+`create-react-app`.
+
+The benefits here are that you do not need to install `create-react-app`
+locally, and you will always be installing the latest version of
+`create-react-app` when you start a new project.
+
+When creating new projects, you can instead run:
+
+```sh
+npx create-react-app <my-app>
+
+# or
+npm init react-app <my-app>
+```
+
 > Here you will begin setting up a blog app that you will continue working on
 > during this lesson's exercises. For demonstration purposes, We will be
 > creating a simple "hello world" app.
