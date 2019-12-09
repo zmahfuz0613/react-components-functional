@@ -87,7 +87,8 @@ When creating new projects, you can instead run:
 ```sh
 npx create-react-app <my-app>
 
-# or
+# Or, you can run:
+
 npm init react-app <my-app>
 ```
 
@@ -345,6 +346,11 @@ export default App;
 Now, in `index.js` add some props and see them printed to the console.
 
 As a bonus, write some JSX that will render the props you pass in!
+
+### SEI 34 Note: Use React Developer Tools
+
+`console.logs` are useful, but in react it's better to use the React Developer
+Tools in the inspector to see the props and state of a given element.
 
 ## You Do: A Blog Post
 
