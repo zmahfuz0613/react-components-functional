@@ -72,7 +72,7 @@ code .
 npm run start
 ```
 
-### SEI 34 Notes
+### Aside: NPX v NPM
 
 The [offical React docs](https://reactjs.org/docs/create-a-new-react-app.html)
 suggest using `npx`, a modern javascript package runner, to run
@@ -92,9 +92,11 @@ npx create-react-app <my-app>
 npm init react-app <my-app>
 ```
 
-> Here you will begin setting up a blog app that you will continue working on
-> during this lesson's exercises. For demonstration purposes, We will be
-> creating a simple "hello world" app.
+### React Blog
+
+Here you will begin setting up a blog app that you will continue working on
+during this lesson's exercises. For demonstration purposes, We will be
+creating a simple "hello world" app.
 
 After running `npm run start`, we can view the app at `http://localhost:3000`
 
@@ -347,7 +349,7 @@ Now, in `index.js` add some props and see them printed to the console.
 
 As a bonus, write some JSX that will render the props you pass in!
 
-### SEI 34 Note: Use React Developer Tools
+### Use React Developer Tools
 
 `console.logs` are useful, but in react it's better to use the React Developer
 Tools in the inspector to see the props and state of a given element.
