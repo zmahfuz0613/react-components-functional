@@ -1,41 +1,165 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# React Components Part 1: Functional Components
+# Intro to React.js
 
-There are two ways that we can define components in React: as a function or as
-an ES6 class. We'll start by looking at functions.
+![react-logo](./images/react-white-logo.png)
 
-## Prerequisites
+## Learning Objectives
 
-- HTML and CSS
-- JavaScript
+- Explain what a frontend framework is and why they can be helpful in writing
+  more complex applications.
+- Explain what ReactJS is and where it fits in our applications' stack.
+- Explain the component model of web development.
+- Create and render React components in the browser.
 
-## Objectives
+## Framing
 
-By the end of this, developers should be able to:
+### What is a Frontend Framework?
 
-- Set up a new React application with `create-react-app`
-- Create and render React components in the browser
-- Pass data as `props` into a React Component
+- A framework is software providing generic functionality and structure that
+  serves as foundation to build and deploy applications.
+- Express, which you'll learn next unit, is a framework that runs on the server, receives incoming requests
+  from the client, performs some work that you have defined, and returns a
+  response to the client. React is a front-end framework, which runs in the
+  browser only. It makes building complex user interfaces easier.
+- Frameworks can help standardize code, give you additional functionality and
+  performance, and can help get your code off the ground faster.
+- There are [many](https://2018.stateofjs.com/front-end-frameworks/overview/) front end frameworks
+  and each go about solving problems of how state is managed, updated, and
+  displayed on the page in their own way, but there are many commonalities.
+- There is a lot of debate over whether frontend frameworks count as frameworks
+  at all -- some people say that they are just libraries and should be referred
+  to as such.
 
-## Introduction
+### What is ReactJS?
 
-There are two ways we can define components and two ways we can manage data in
+React is a JavaScript library used to craft modern day UI and views for the
+front-end in web applications.
+
+> **Selling Point:** By modeling small compatible components that focus on just
+> rendering a view, we can move business logic out of the DOM, and therefore
+> improve our app's performance, maintainability, modularity and readability.
+
+#### Some History
+
+The first thing most people hear about React is "Facebook uses it."
+
+- First used by Facebook in 2011.
+- Then Instagram in 2012.
+- Went open source in May 2013.
+
+React was born out of Facebook's frustration with the traditional MVC model and
+how..
+
+- Re-rendering something meant re-rendering everything (or just a lot).
+- That had negative implications on processing power and ultimately user
+  experience, which at times became glitchy and laggy.
+
+> If you want to get a taste of what React is all about,
+> [here's an introduction from React.js Conf 2015](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&feature=youtu.be&t=510).
+> Recommend starting around the 8:35 mark and watching until 16:30.
+
+## Components
+
+The way we've been building our pages so far is using
+HTML or simply rendering JSON data. We display a whole page at a time, and in order to display an
+update, we have to reload the entire page.
+
+A core part of the React philosophy is to build everything out using components,
+instead of templates.
+
+You can think of a component as a small piece of a webpage that has a singular
+purpose. It can be as little as a single `<input>` field or as big as a sidebar
+containing other components. Yes, components can hold other components.
+
+![Templates Page](images/templates-page.png)
+
+![Components Page](images/components-page.png)
+
+> [WanderOak - Fixed Templates vs. Components](https://wanderoak.co/fixed-templates-vs-components/)
+
+With components, we define them once (each React component should be defined in
+its own file), and we can reuse them as many times as we want, on different
+pages.
+
+When we need to make updates, we only have to make those updates in one file.
+
+### Examples!
+
+Let's take a look at an example webapp and see how it might be broken down into
 components.
 
-The two ways we can define components are:
+![Wireframe](images/wireframe.png)
+![Wireframe with components](images/wireframe_deconstructed.png)
 
-1. With a function
-1. With an ES6 class
+> [MakeTea - Building Robust Apps with React](http://maketea.co.uk/2014/03/05/building-robust-web-apps-with-react-part-1.html)
 
-The two ways we can manage data in components are:
+Notice the structure of how the various components are nested.
 
-1. Props (data passed into a component, like arguments are passed into a
-   function)
-1. State (data managed within a class component)
+```
+- TubeTracker
+    - Network
+        - Line
+    - Predictions
+        - DepartureBoard
+            - Trains
+```
 
-We'll start by exploring function components and props, then look at class
-components and state.
+- TubeTracker contains the application
+- Network displays each line on the network
+- Line displays the stations on a line
+- Predictions controls the state of the departure board
+- DepartureBoard displays the current station and platforms
+- Trains displays the trains due to arrive at a platform
+
+### [F.I.R.S.T. Components](https://addyosmani.com/first/)
+
+Best practice is that React components follow the **F.I.R.S.T.** guidelines
+
+#### Focused
+
+Components should do one thing and do it well.
+
+#### Independent
+
+Components should increase cohesion and reduce coupling. Behavior in one
+component should not impact the behavior of another. In other words, components
+should not rely on one another.
+
+> But they should compliment one another.
+
+#### Reusable
+
+Components should be written in a way that reduces the duplication of code.
+
+#### Small
+
+Ideally, components should be short and condensed.
+
+#### Testable
+
+Because the same input will always produce the same output, components are
+easily unit testable.
+
+> If you're interested,
+> [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular
+> testing library for React.
+
+## Exercise: Identifying Components
+
+> 10 minutes exercise. 5 minutes review.
+
+- Break into groups of three and take a look at Facebook, Craigslist, Ebay, or a
+  website of your choice. Identify the visual "components" the website is
+  comprised of. Use markers to draw these out on the wall.
+
+As you're drawing this out, think about the following questions...
+
+- Where do you see "nested components"? Where do you not?
+- Are there any components that share the same structure?
+- Of these similar components, what is different about them?
+
+
 
 ## Initial Setup
 
